@@ -21,19 +21,19 @@ const gsRun= async (cl)=>{
     const gsapi = google.sheets({version:'v4',auth: cl});
 
     const opt = {
-        spreadsheetId: '1QnlSwfwIQXVkpbliDdmW2HU9q5ePSFgGszqlcU3pfKw',
-        range: 'Sheet1!A1:B5'
+        spreadsheetId: '1UViNkEPeuq6PlLJ7vFoaXjqtrJHMdEHwLrbkFk-Ttfs',
+        range: 'Sheet1!A1:D6'
     };
 
     let data = await gsapi.spreadsheets.values.get(opt);
-    // console.log(data.data.values);
+    console.log(data.data.values);
 
-    let dataArray = data.data.values;
+    // let dataArray = data.data.values;
 
-    let newDataArray = dataArray.map((r)=>{
-        r.push(r[0]+ '-'+ r[1]);
-        return r;
-    });
+    // let newDataArray = dataArray.map((r)=>{
+    //     r.push(r[0]+ '-'+ r[1]);
+    //     return r;
+    // });
 
-    console.log(newDataArray);
+    // console.log(newDataArray);
 }
